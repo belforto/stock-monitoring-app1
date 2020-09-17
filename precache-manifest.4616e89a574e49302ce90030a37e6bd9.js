@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "041b1843c531d50e9f72deb821202d61",
+    "revision": "68e3d09f2f7c43df0332117e93caab5c",
     "url": "/stock-monitoring-app1/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stock-monitoring-app1/static/css/2.809f38ef.chunk.css"
   },
   {
-    "revision": "3912698ef87c0a635ca8",
+    "revision": "f70be5060454dc44b069",
     "url": "/stock-monitoring-app1/static/css/main.82c32bb2.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stock-monitoring-app1/static/js/2.7c262d93.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3912698ef87c0a635ca8",
-    "url": "/stock-monitoring-app1/static/js/main.efe60857.chunk.js"
+    "revision": "f70be5060454dc44b069",
+    "url": "/stock-monitoring-app1/static/js/main.ccbac31e.chunk.js"
   },
   {
     "revision": "a467e4bb70b2e086ccbc",
