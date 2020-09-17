@@ -16,22 +16,27 @@ import {
 } from "recharts";
 
 import ReactAutocomplete from "react-autocomplete";
-
 import { KEY } from "./api/Credentials";
 import { funnelData,suggestedStocks } from "./api/Others";
 import { callApiTimeSeriesData } from "./api/Api";
 
+
+
 export default function StockProvider() {
+
   const [data, setData] = useState<any>([]);
   const [symbol, setSymbol] = useState<string>("IBM");
   const [change, setChange] = useState<boolean>(false);
 
   const setupData = async () => {
+    //CALL THE API TO GET PARTICULAR STOCK
     let data: any = await callApiTimeSeriesData(symbol, KEY);
-    let extractedData: any = data.map((x, i) => ({
+    //TRASFORM INTO FORMATED DATA
+    let extractedData:  { name: string; uv: number; }[] = data.map((x, i) => ({
       name: x[0],
       uv: Number(x[1]["1. open"]).toFixed(2)
     }));
+
     setData(extractedData);
   };
 
@@ -59,25 +64,16 @@ export default function StockProvider() {
           }
           getItemValue={item => item.label}
           renderItem={(item, highlighted) => (
-            <div
-              key={item.id}
-              style={{ backgroundColor: highlighted ? "#eee" : "transparent" ,zIndex:77, margin:50}}
-            >
+            <div key={item.id} style={{ backgroundColor: highlighted ? "#eee" : "transparent" ,zIndex:77, margin:50}}>
               {item.label}
             </div>
           )}
           value={symbol}
-          onChange={e => {
-            setSymbol(e.target.value);
-          }}
-          onSelect={value => {
-            console.log(value);
-            setSymbol(value);
-          }}
+          onChange={e => { setSymbol(e.target.value) }}
+          onSelect={value => { setSymbol(value) }}
         />
 
-        <button
-          type="button"
+        <button type="button" className="btn btn-info"
           onClick={() => {
             console.log(symbol);
             setChange(!change);
@@ -85,9 +81,13 @@ export default function StockProvider() {
         >
           Change Stock
         </button>
+
       </div>
       <hr/>
+
       </div>
+
+
       <div className="row">
         {data && (
           <LineChart
@@ -110,7 +110,7 @@ export default function StockProvider() {
               type="monotone"
               dataKey="pv"
               stroke="#8884d8"
-              activeDot={{ r: 8 }}
+              activeDot={{ r: 18}}
             />
             <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
           </LineChart>

@@ -7,31 +7,29 @@ import BarLoader from "react-spinners/BarLoader";
 import { callNewsApi, callTickerApi } from "./api/Api";
 
 export default function MoveStuffAround() {
+
   const [data, setData] = useState<any[]>();
   const [news, setNews] = useState<any[]>();
-  const override = `
- 
-`;
+  const override = ``;
 
   const setupData = async () => {
+    //CALL THE API
     let rawTickerData: any = await callTickerApi();
-
-    const tickerData: any = rawTickerData.map(x => ({
+    //TRANSFORM DATA TO TICKERS
+    const tickerData: { name: string; change: number; avg:number }[] = rawTickerData.map(x => ({
       name: x.exchange,
       change: x.fiftyTwoWeekHighChangePercent,
       avg: x.fiftyDayAverage
     }));
-
     //SET TICKER DATA
     setData(tickerData);
 
     let rawNewsData: any = await callNewsApi();
-
+    //TRANSFORM RAW DATA INTO NEWS TITLES
     let prepNews = rawNewsData.map(x => ({
       title: x.title
     }));
-    console.log(prepNews);
-
+    
     //SET NEWS DATA
     setNews(prepNews);
   };
@@ -90,7 +88,9 @@ export default function MoveStuffAround() {
                       style={{
                         whiteSpace: "nowrap",
                           fontSize:"2.5em",
-                        padding: 20
+                        padding: 20,
+                        backgroundColor: "#282c34",
+                        color: "white",
                       }}
                       key={index}
                     >
