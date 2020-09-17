@@ -18,7 +18,7 @@ import {
 import ReactAutocomplete from "react-autocomplete";
 
 import { KEY } from "./api/Credentials";
-import { funnelData } from "./api/Others";
+import { funnelData,suggestedStocks } from "./api/Others";
 import { callApiTimeSeriesData } from "./api/Api";
 
 export default function StockProvider() {
@@ -53,13 +53,7 @@ export default function StockProvider() {
         </div>
 
         <ReactAutocomplete
-          items={[
-            { id: "AMZN", label: "AMZN" },
-            { id: "AAPL", label: "AAPL" },
-            { id: "MSFT", label: "MSFT" },
-            { id: "IBM", label: "IBM" },
-            { id: "AMD", label: "AMD" }
-          ]}
+          items={suggestedStocks}
           shouldItemRender={(item, value) =>
             item.label.toLowerCase().indexOf(value.toLowerCase()) > -1
           }

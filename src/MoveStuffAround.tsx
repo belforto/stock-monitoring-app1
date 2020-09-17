@@ -75,7 +75,7 @@ export default function MoveStuffAround() {
         <Ticker direction={"toLeft"} speed={5} offset={5}>
           {({ index }) => (
             <>
-              <h1> Read Latest News from The Stock Exchanges {index}! </h1>
+              <h4> Read Latest News from The Stock Exchanges ! </h4>
               <img src="www.my-image-source.com/" alt="" />
             </>
           )}
@@ -89,7 +89,7 @@ export default function MoveStuffAround() {
                     <span
                       style={{
                         whiteSpace: "nowrap",
-
+                          fontSize:"2.5em",
                         padding: 20
                       }}
                       key={index}

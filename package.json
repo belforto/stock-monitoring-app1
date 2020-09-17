@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "homepage": "http://belforto.github.io/stock-monitoring-app1",
+  "name": "stock-monitoring-app1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@types/react-dom": "^16.9.0",
     "alphavantage": "^2.2.0",
     "bootstrap": "^5.0.0-alpha1",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.13.1",
@@ -33,7 +35,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
