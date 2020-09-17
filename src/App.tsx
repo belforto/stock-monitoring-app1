@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import bank from "./bank.png";
+import "./App.css";
+import "./main.css";
 
+//api key WOZZKFZ37NPP7BCD
+import StockProvider from "./StockProvider";
+import MoveStuffAround from "./MoveStuffAround";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+       
+        <img src={bank} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Welcome to the  <code>online</code>  Stock News
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </header>
+      <div className="alert alert-success" role="alert">
+       Live Ticker Data
+      </div>
+      <MoveStuffAround />
+      <StockProvider />
     </div>
   );
 }
