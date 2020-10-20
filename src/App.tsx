@@ -6,9 +6,11 @@ import "./main.css";
 //api key WOZZKFZ37NPP7BCD
 import StockProvider from "./StockProvider";
 import MoveStuffAround from "./MoveStuffAround";
+import TestReduxScren from "./screens/TestReduxScren";
 function App() {
   return (
     <div className="App">
+   
       <header className="App-header">
        
         <img src={bank} className="App-logo" alt="logo" />
@@ -22,6 +24,8 @@ function App() {
       </div>
       <MoveStuffAround />
       <StockProvider />
+
+      <TestReduxScren/>
     </div>
   );
 }
