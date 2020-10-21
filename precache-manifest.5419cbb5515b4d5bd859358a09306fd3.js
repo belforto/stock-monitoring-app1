@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a5f99213d94930d4f0c7cf6f4ba6d26",
+    "revision": "aa416d7b970358eba8e31b89863fc36e",
     "url": "/stock-monitoring-app1/index.html"
   },
   {
-    "revision": "545a3c0cb4757f4abf63",
+    "revision": "d15d0222d81a5b091e55",
     "url": "/stock-monitoring-app1/static/css/2.809f38ef.chunk.css"
   },
   {
-    "revision": "91e93500977871df6a4f",
+    "revision": "cf645f147840e6a5230c",
     "url": "/stock-monitoring-app1/static/css/main.82c32bb2.chunk.css"
   },
   {
-    "revision": "545a3c0cb4757f4abf63",
-    "url": "/stock-monitoring-app1/static/js/2.37924977.chunk.js"
+    "revision": "d15d0222d81a5b091e55",
+    "url": "/stock-monitoring-app1/static/js/2.85c26fda.chunk.js"
   },
   {
     "revision": "ca3cfcda77dc9f4f71fda9fdfcf14fb0",
-    "url": "/stock-monitoring-app1/static/js/2.37924977.chunk.js.LICENSE.txt"
+    "url": "/stock-monitoring-app1/static/js/2.85c26fda.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "91e93500977871df6a4f",
-    "url": "/stock-monitoring-app1/static/js/main.84d0e259.chunk.js"
+    "revision": "cf645f147840e6a5230c",
+    "url": "/stock-monitoring-app1/static/js/main.c45e82f2.chunk.js"
   },
   {
     "revision": "a467e4bb70b2e086ccbc",
